@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/customstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("3Q8hnPc21H8awbYML");
+        })();
+        </script>
+</head>
+
+
+
+<body class="pt-24 px-40">
+    <div class="container">
+        <header class="p-10 border-solid border-2 border-white">
+            <div class="topHeader w-full grid gap-4 grid-cols-2 justify-between items-center">
+                <div class="logoWrapper w-full">
+                    <h1 class="logo font-marckscript text-5xl font-bold">Blerona</h1>
+                </div>
+                <div class="switchModeBtn w-full">
+                    <label class="switch">
+                        <input type="checkbox" onclick="myFunction()" />
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="aboutMe container grid grid-cols-12 gap-10 justify-between lg:mt-[220px]">
+            <div class="col-span-3 lg:col-span-4 sticky top-44">
+                <div
+                    class="my-profile mb-6 lg:mb-0  mx-auto   relative bg-white text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0 ">
+                    <img src="./assets/images/ME.jpeg" alt=""
+                        class="me w-[197px] relative left-[28%] -top-[100px] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px]">
+                    <div class="myCard pb-8">
+                        <h1 class="myName mb-6 text-4xl font-semibold">Blerona Maxhuni</h1>
+                        <h6 class="myOccupation mb-4 text-[#7B7B7B] inline-block  px-5 py-1.5 rounded-lg">Front End /
+                            Wordpress Developer</h6>
+                        <div class="mySocials flex justify-center space-x-3">
+                            <span class="socialbtn text-[#1773EA]"><a href="https://www.facebook.com/"><i
+                                        class="fa-brands fa-facebook-f"></i></a></span>
+                            <span class="socialbtn text-[#1C9CEA]"><a href="https://www.linkedin.com/"><i
+                                        class="fa-brands fa-linkedin"></i></a></span>
+                            <span class="socialbtn text-[#e14a84] "><a href="https://www.instagram.com/"><i
+                                        class="fa-brands fa-instagram"></i></a></span>
+                        </div>
+
+                        <div class="myData p-7 rounded-2xl mt-7  bg-[#F3F6F6]">
+                            <div class="data flex border-b border-[#E3E3E3] pb-2.5 pt-3">
+                                <span class="flex-shrink-0 socialbtn bg-white dark:bg-black text-[#E93B81] shadow-md"><i
+                                        class="fa fa-phone"></i></span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C]">Phone</p>
+                                    <p class="break-all">+38349877385</p>
+                                </div>
+                            </div>
+                            <div class="data flex border-b border-[#E3E3E3] pb-2.5 pt-3">
+                                <span class="flex-shrink-0 socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md"><i
+                                        class="fa fa-envelope"></i></span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C]">Email</p>
+                                    <p class="break-all">bleronamaxhunni@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="data flex border-b border-[#E3E3E3] pb-2.5 pt-3">
+                                <span class="flex-shrink-0 socialbtn bg-white dark:bg-black text-[#FD7590] shadow-md"><i
+                                        class="fa fa-map-marker"></i></span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C]">Location</p>
+                                    <p class="break-all">Vushtrri, Kosova</p>
+                                </div>
+                            </div>
+                            <div class="data flex border-b border-[#E3E3E3] pb-2.5 pt-3">
+                                <span class="flex-shrink-0 socialbtn bg-white dark:bg-black text-[#C17CEB] shadow-md"><i
+                                        class="fa fa-calendar"></i></span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C]">Birthday</p>
+                                    <p class="break-all">May 13, 2002</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-9 lg:col-span-4 sticky top-44">
+                <div class="navMenu w-[526px] h-[144px]  p-[30px] ml-auto mb-10  mt-[180px] rounded-[16px] bg-white">
+                    <nav class="block">
+                        <ul class="clearfix flex">
+                            <a class="activ w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                                href="#one"><span class="iconLink"><i class="fa fa-user"></i></span>
+                                About Me</a>
+                            <a class="w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                                href="#two"> <span class="iconLink"><i class="fa fa-file"></i></span>
+                                Resume</a>
+                            <a class="w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                                href="#three"> <span class="iconLink"><i class="fa fa-tasks"></i></span>
+                                Projects</a>
+                            <a class="w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                                href="#four"> <span class="iconLink"><i class="fa fa-address-book"></i></span>
+                                Contact</a>
+                        </ul>
+                    </nav>
+                </div>
+
+
+                <section class="bg-white w-11/12 h-auto flex flex-col ml-auto mb-20 rounded-[20px]  pt-8 pb-3 px-16">
+                    <div class="content activ" id="one">
+                        <div class="w-full h-auto">
+                            <div class="aboutMe mb-16">
+                                <h1 class="aboutTitle text-4xl flex items-center font-bold mb-7 gap-8">About Me
+                                    <hr class="sides border">
+                                    </h2>
+                                    <p class="aboutMeParagraph text-[#7B7B7B]">I am undergraduate student at the
+                                        University of Business and Technology (UBT), studying Computer Science and
+                                        Engineering (CSE). Knowledgeable in user interface, testing, and debugging
+                                        processes. Proficient in an assortment of technologies, including HTML , CSS
+                                        (Bootstrap ,SCSS and Tailwind), Javascript, PHP and Wordpress. Able to
+                                        effectively self-manage during independent projects, as
+                                        well as collaborate in a team setting. I have participated in an internship for
+                                        four months as Front End Developer. I've experience with
+                                        Adobe XD, Photoshop and Figma. I'm also familiar with Java, SQL and Algorithms &
+                                        Data Structure. Hardworking, dedicated and
+                                        enthusiastic person. I am confident in my knowledge, but I am still interested
+                                        in acquiring more knowledge and, of course, experience. Therefore, I am
+                                        interested in being a part of your company as Front End / Wordpress Developer.
+                                    </p>
+                            </div>
+                            <div class="WhatIDo mb-16">
+                                <h1 class="title text-3xl flex items-center font-semibold mb-7">What I Do!</h2>
+                                    <div class="grid gap-8 gap-x-28 grid-cols-2 md:grid-cols-1 xl:grid-cols-2">
+
+                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
+                                            style="background: rgb(252, 244, 255);">
+                                            <i
+                                                class="fa-solid fa-swatchbook text-3xl w-10 h-10 object-contain text-[#d870ff]"></i>
+                                            <div class="space-y-2 break-all">
+                                                <h3 class="text-xl font-semibold">Design Ideas</h3>
+                                            </div>
+                                        </div>
+                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
+                                            style="background: rgb(254, 250, 240);">
+                                            <i
+                                                class="fa-solid fa-object-ungroup  text-3xl w-10 h-10 object-contain text-[#fbc336]"></i>
+                                            <div class="space-y-2 break-all">
+                                                <h3 class="text-xl font-semibold">Client-side</h3>
+                                            </div>
+                                        </div>
+                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
+                                            style="background: rgb(255, 244, 244);">
+                                            <i
+                                                class="fa-solid fa-mobile-button  text-3xl w-10 h-10 object-contain text-[#e75f5f]"></i>
+                                            <div class="space-y-2 break-all">
+                                                <h3 class="text-xl font-semibold">Responsivity</h3>
+                                            </div>
+                                        </div>
+                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
+                                            style="background: rgb(255, 240, 248);">
+                                            <i
+                                                class="fa-solid fa-list-check text-3xl w-10 h-10 object-contain text-[#e557a2]"></i>
+                                            <div class="space-y-2 break-all">
+                                                <h3 class="text-xl font-semibold">Management</h3>
+                                            </div>
+                                        </div>
+                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
+                                            style="background: rgb(243, 250, 255);">
+                                            <i
+                                                class="fa-solid fa-code text-3xl w-10 h-10 object-contain text-[#419ee1]"></i>
+                                            <div class="space-y-2 break-all">
+                                                <h3 class="text-xl font-semibold">Web Development</h3>
+                                            </div>
+                                        </div>
+                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
+                                            style="background: rgb(252, 244, 255);">
+                                            <i
+                                                class="fa-solid fa-laptop  text-3xl w-10 h-10 object-contain text-[#d870ff]"></i>
+                                            <div class="space-y-2 break-all">
+                                                <h3 class="text-xl font-semibold">Testing</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="mySkills w-full flex flex-col bg-[#F8FBFB] py-10 rounded-xl mb-20">
+                            <h1 class="title text-3xl text-center font-semibold mb-7">Skills</h2>
+                                <div class="myskillslider w-full flex justify-center">
+                                    <ul id="c" class="skillList w-10/12 flex justify-center">
+                                        <li class="imageList"><img class="object-scale-down w-[70px] h-full"
+                                                src="./assets/images/html.png"></li>
+                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                                src="./assets/images/css-3.png"></li>
+                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                                src="./assets/images/bootstrap.png"></li>
+                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                                src="./assets/images/js-file.png"></li>
+                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                                src="./assets/images/wordpress.png"></li>
+                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                                src="./assets/images/php.png"></li>
+                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                                src="./assets/images/sql-server.png"></li>
+                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                                src="./assets/images/xd.png"></li>
+                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                                src="./assets/images/photoshop.png"></li>
+                                    </ul>
+                                </div>
+                        </div>
+
+                        <div class="copyright">
+                            <p class="text-center text-slate-500">&copy;2022 Blerona Maxhuni</p>
+                        </div>
+                    </div>
+                    <div class="content" id="two">
+                        <div class="w-full h-auto">
+                            <div class="myResume mb-16">
+                                <h1 class="resumeTitle text-4xl flex items-center font-bold mb-7 gap-8">Resume
+                                    <hr class="sides border">
+                                </h1>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6 mt-[30px] mb-16">
+                                <div>
+                                    <div class="flex items-center space-x-2 mb-4 "><svg stroke="currentColor"
+                                            fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                            class="text-6xl text-[#F95054]" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                            <path
+                                                d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z">
+                                            </path>
+                                        </svg>
+                                        <h4 class="text-5xl font-medium">Education</h4>
+                                    </div>
+                                    <div class="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  "
+                                        style="background: rgb(255, 244, 244);"><span
+                                            class="text-tiny text-gray-lite ">2020-Present</span>
+                                        <h3 class="text-xl ">Computer Science and Engineering</h3>
+                                        <p class="">UBT College - Higher Education Institution</p>
+                                    </div>
+                                    <div class="py-4 pl-5 pr-3 space-y-2  mb-6 rounded-lg "
+                                        style="background: rgb(255, 241, 251);"><span
+                                            class="text-tiny text-gray-lite ">2020</span>
+                                        <h3 class="text-xl ">HTML and CSS Courses</h3>
+                                        <p class="">UDEMY</p>
+                                    </div>
+                                    <div class="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  "
+                                        style="background: rgb(255, 244, 244);"><span
+                                            class="text-tiny text-gray-lite ">2020-2021</span>
+                                        <h3 class="text-xl ">Javascript</h3>
+                                        <p class="">ICK</p>
+                                    </div>
+                                    <div class="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  "
+                                        style="background: rgb(255, 241, 251);"><span
+                                            class="text-tiny text-gray-lite ">2022</span>
+                                        <h3 class="text-xl ">Tailwind, Wordpress, PHP and SQL </h3>
+                                        <p class="">Youtube</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center space-x-2 mb-4 "><svg stroke="currentColor"
+                                            fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                            class="text-6xl text-[#F95054]" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                            <path
+                                                d="M20 7h-4V5l-2-2h-4L8 5v2H4c-1.1 0-2 .9-2 2v5c0 .75.4 1.38 1 1.73V19c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-3.28c.59-.35 1-.99 1-1.72V9c0-1.1-.9-2-2-2zM10 5h4v2h-4V5zM4 9h16v5h-5v-3H9v3H4V9zm9 6h-2v-2h2v2zm6 4H5v-3h4v1h6v-1h4v3z">
+                                            </path>
+                                        </svg>
+                                        <h4 class="text-5xl font-medium">Experience</h4>
+                                    </div>
+                                    <div class="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  "
+                                        style="background: rgb(238, 245, 250);"><span
+                                            class="text-tiny text-gray-lite ">4 Months Internship</span>
+                                        <h3 class="text-xl ">Front End / Web Developer</h3>
+                                        <p class="">Spinp Agency</p>
+                                    </div>
+                                    <div class="py-4 pl-5 pr-3 space-y-2  mb-6  rounded-lg"
+                                        style="background: rgb(242, 244, 255);"><span
+                                            class="text-tiny text-gray-lite ">3 Months Internship</span>
+                                        <h3 class="text-xl ">Wordpress Developer</h3>
+                                        <p class="">Starlabs</p>
+                                    </div>
+                                    <div class="py-4 pl-5 pr-3 space-y-2  mb-6 rounded-lg  "
+                                        style="background: rgb(238, 245, 250);"><span
+                                            class="text-tiny text-gray-lite ">Upwork Freelancer</span>
+                                        <h3 class="text-xl ">Front End / Wordpress Developer</h3>
+                                        <p class="">Upwork</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="my-skills grid grid-cols-2  md:grid-cols-1 gap-28 w-full flex bg-[#F8FBFB] p-10 rounded-xl mb-16">
+                            <div class="skills col-span-1">
+                                <h1 class="text-2xl font-medium mb-6 text-center">Working Skills</h1>
+                                <div class="skills-bar">
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>HTML</span>
+                                        </div>
+                                        <div class="progress-line"><span class="html"></span></div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>CSS</span>
+                                        </div>
+                                        <div class="progress-line"><span class="css"></span></div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>BOOTSTRAP</span>
+                                        </div>
+                                        <div class="progress-line"><span class="bootstrap"></span></div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>Tailwind</span>
+                                        </div>
+                                        <div class="progress-line">
+                                            <span class="tailwind"></span>
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>JAVASCRIPT</span>
+                                        </div>
+                                        <div class="progress-line">
+                                            <span class="javascript"></span>
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>Wordpress</span>
+                                        </div>
+                                        <div class="progress-line"><span class="wordpress"></span></div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>PHP</span>
+                                        </div>
+                                        <div class="progress-line"><span class="php"></span></div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>SQL</span>
+                                        </div>
+                                        <div class="progress-line"><span class="sql"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <h4 class="text-2xl font-medium mb-6 text-center">Knowledges</h4>
+                                <div class="flex gap-y-5 gap-x-5 flex-wrap">
+                                    <button class="resume-btn">Web Design</button>
+                                    <button class="resume-btn">Marketing</button>
+                                    <button class="resume-btn">Client Side Development</button>
+                                    <button class="resume-btn">Responsivity</button>
+                                    <button class="resume-btn">Testing & debugging</button>
+                                    <button class="resume-btn">Flexibility</button>
+                                    <button class="resume-btn">Project Ideas</button>
+                                    <button class="resume-btn">Project Menagement</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright">
+                            <p class="text-center text-slate-500">&copy;2022 Blerona Maxhuni</p>
+                        </div>
+                    </div>
+                    <div class="content" id="three">
+                        <div class="w-full h-auto">
+                            <div class="myWork mb-16">
+                                <h1 class="WorkTitle text-4xl flex items-center font-bold mb-7 gap-8">Projects
+                                    <hr class="sides border">
+                                </h1>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6 mt-[30px] mb-16">
+                                <div class="rounded-lg p-6 border-[#212425]" style="background: #6283a9;">
+                                    <a href="https://zkm.netlify.app/">
+                                        <div class="overflow-hidden rounded-lg"><img
+                                                class="w-full    cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto "
+                                                src="./assets/images/Screenshot (149).png" alt=""></div>
+                                    </a>
+                                </div>
+                                <div class="rounded-lg p-6 border-[#212425]" style="background: #898363;">
+                                    <a href="https://autosaloon.netlify.app/">
+                                        <div class="overflow-hidden rounded-lg"><img
+                                                class="w-full    cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto "
+                                                src="./assets/images/Screenshot (151).png" alt=""></div>
+                                    </a>
+                                </div>
+                                <div class="rounded-lg p-6 border-[#212425]" style="background: #997058;">
+                                    <a href="https://errorsoftware.netlify.app/">
+                                        <div class="overflow-hidden rounded-lg">
+                                            <img class="w-full    cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto "
+                                                src="./assets/images/Screenshot (152).png" alt=""></div>
+                                    </a>
+                                </div>
+                                <div class="rounded-lg p-6 border-[#212425]" style="background: #000000;">
+                                    <a href="https://our-company.netlify.app/">
+                                        <div class="overflow-hidden rounded-lg"><img
+                                                class="w-full    cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto "
+                                                alt="" src="./assets/images/Screenshot (153).png"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        <div class="copyright">
+                            <p class="text-center text-slate-500">&copy;2022 Blerona Maxhuni</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="content" id="four">
+                        <div class="w-full h-auto">
+                            <div class="contact mb-16">
+                                <h1 class="contactTitle text-4xl flex items-center font-bold mb-7 gap-8">Contact Me
+                                    <hr class="sides border">
+                                </h1>
+                            </div>
+                            <div class="mx-4 md:mx-[60px] p-4 md:p-16  bg-color-810 rounded-xl  mb-[30px] md:mb-[60px]">
+                                <h3 class="text-4xl  "><span class="text-gray-lite ">Get in touch with </span><span
+                                        class="font-bold"> Me</span></h3>
+                                <form id="myForm">
+                                    <div class="relative  z-0 w-full mt-[40px] mb-8 group">
+                                        <input type="text" id="name" name="name" class="block autofill:bg-transparent py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none  focus:outline-none focus:ring-0 focus:border-[#FF6464] peer"
+                                        placeholder=" " required="">
+                                        <label for="name"class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FF6464] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Name
+                                        *</label></div>
+                                    <div class="relative z-0 w-full mb-8 group">
+                                        <input type="email"  id="email" name="user_email" class="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none  focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"
+                                            placeholder=" " id="user_email" required="">
+                                            <label for="user_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Email
+                                            *</label></div>
+                                    <div class="relative z-0 w-full mb-8 group">
+                                        <input type="text" name="message" class="block autofill:bg-yellow-200 py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none  focus:outline-none focus:ring-0 focus:border-[#CA56F2] peer"
+                                            placeholder=" " id="message" required="">
+                                        <label for="message" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#CA56F2] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Message
+                                            *</label></div>
+
+                                    <div class="transition-all duration-300  ease-in-out inline-block hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] rounded-lg  mt-3">
+                                        <button type="submit" onclick="sendEmail()"
+                                            class=" transition ease-in duration-200 font-semibold cursor-pointer border-color-910   hover:border-transparent px-6  py-2 rounded-lg border-[2px]  hover:text-white   "
+                                            value="Submit"></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="copyright">
+                            <p class="text-center text-slate-500">&copy;2022 Blerona Maxhuni</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <script src="assets/js/customscript.js"></script>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+
+</html>
