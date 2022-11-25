@@ -525,10 +525,6 @@ video {
   position: relative;
 }
 
-.sticky {
-  position: sticky;
-}
-
 .top-44 {
   top: 11rem;
 }
@@ -563,10 +559,6 @@ video {
 
 .col-span-1 {
   grid-column: span 1 / span 1;
-}
-
-.col-span-4 {
-  grid-column: span 4 / span 4;
 }
 
 .mx-auto {
@@ -637,20 +629,16 @@ video {
   margin-top: 30px;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mb-\[30px\] {
   margin-bottom: 30px;
 }
 
 .mt-\[40px\] {
   margin-top: 40px;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .mt-3 {
@@ -671,10 +659,6 @@ video {
 
 .grid {
   display: grid;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .h-\[240px\] {
@@ -779,10 +763,6 @@ video {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -835,21 +815,6 @@ video {
 
 .gap-y-5 {
   row-gap: 1.25rem;
-}
-
-.gap-x-2\.5 {
-  -moz-column-gap: 0.625rem;
-       column-gap: 0.625rem;
-}
-
-.gap-x-2 {
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
-}
-
-.gap-x-3 {
-  -moz-column-gap: 0.75rem;
-       column-gap: 0.75rem;
 }
 
 .gap-x-5 {
@@ -950,11 +915,6 @@ video {
   border-color: rgb(33 36 37 / var(--tw-border-opacity));
 }
 
-.border-\[\#6283a9\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(98 131 169 / var(--tw-border-opacity));
-}
-
 .border-\[\#B5B5B5\] {
   --tw-border-opacity: 1;
   border-color: rgb(181 181 181 / var(--tw-border-opacity));
@@ -1011,10 +971,6 @@ video {
   padding: 30px;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
 .p-12 {
   padding: 3rem;
 }
@@ -1065,11 +1021,6 @@ video {
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .py-4 {
@@ -1128,14 +1079,6 @@ video {
   padding-right: 0.75rem;
 }
 
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -1183,15 +1126,6 @@ video {
   line-height: 2rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.text-\[14px\] {
-  font-size: 14px;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1207,10 +1141,6 @@ video {
 
 .font-medium {
   font-weight: 500;
-}
-
-.font-normal {
-  font-weight: 400;
 }
 
 .text-\[\#7B7B7B\] {
@@ -1231,11 +1161,6 @@ video {
 .text-\[\#e14a84\] {
   --tw-text-opacity: 1;
   color: rgb(225 74 132 / var(--tw-text-opacity));
-}
-
-.text-\[\#0072b1\] {
-  --tw-text-opacity: 1;
-  color: rgb(0 114 177 / var(--tw-text-opacity));
 }
 
 .text-\[\#E93B81\] {
@@ -1391,11 +1316,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:text-\[\#FA5252\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(250 82 82 / var(--tw-text-opacity));
-}
-
 .focus\:border-\[\#FF6464\]:focus {
   --tw-border-opacity: 1;
   border-color: rgb(255 100 100 / var(--tw-border-opacity));
@@ -1479,57 +1399,14 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:border-2 {
-    border-width: 2px;
-  }
-
-  .dark\:border-\[2px\] {
-    border-width: 2px;
-  }
-
-  .dark\:border-\[\#212425\] {
-    --tw-border-opacity: 1;
-    border-color: rgb(33 36 37 / var(--tw-border-opacity));
-  }
-
-  .dark\:border-\[\#333333\] {
-    --tw-border-opacity: 1;
-    border-color: rgb(51 51 51 / var(--tw-border-opacity));
-  }
-
   .dark\:bg-black {
     --tw-bg-opacity: 1;
     background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   }
 
-  .dark\:bg-\[\#111111\] {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 17 17 / var(--tw-bg-opacity));
-  }
-
   .dark\:text-\[\#A6A6A6\] {
     --tw-text-opacity: 1;
     color: rgb(166 166 166 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-\[\#b7b7b7\] {
-    --tw-text-opacity: 1;
-    color: rgb(183 183 183 / var(--tw-text-opacity));
-  }
-
-  .dark\:hover\:text-\[\#FA5252\]:hover {
-    --tw-text-opacity: 1;
-    color: rgb(250 82 82 / var(--tw-text-opacity));
-  }
-
-  .dark\:focus\:border-\[\#FF6464\]:focus {
-    --tw-border-opacity: 1;
-    border-color: rgb(255 100 100 / var(--tw-border-opacity));
   }
 
   .peer:focus ~ .peer-focus\:dark\:text-\[\#FF6464\] {
@@ -1582,10 +1459,6 @@ video {
 
   .md\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:p-16 {

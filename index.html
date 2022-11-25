@@ -46,7 +46,7 @@
 
 
         <div class="aboutMe container grid grid-cols-12 gap-10 justify-between lg:mt-[220px]">
-            <div class="col-span-3 lg:col-span-4 sticky top-44">
+            <div class="col-span-3 lg:col-span-4 top-44">
                 <div
                     class="my-profile mb-6 lg:mb-0  mx-auto   relative bg-white text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0 ">
                     <img src="./assets/images/ME.jpeg" alt=""
@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="col-span-9 lg:col-span-4 sticky top-44">
+            <div class="col-span-9 lg:col-span-4 top-44">
                 <div class="navMenu w-[526px] h-[144px]  p-[30px] ml-auto mb-10  mt-[180px] rounded-[16px] bg-white">
                     <nav class="block">
                         <ul class="clearfix flex">
@@ -445,7 +445,7 @@
                                         *</label></div>
                                     <div class="relative z-0 w-full mb-8 group">
                                         <input type="email"  id="email" name="user_email" class="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none  focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"
-                                            placeholder=" " id="user_email" required="">
+                                            placeholder=" " required="">
                                             <label for="user_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Email
                                             *</label></div>
                                     <div class="relative z-0 w-full mb-8 group">
@@ -455,9 +455,7 @@
                                             *</label></div>
 
                                     <div class="transition-all duration-300  ease-in-out inline-block hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] rounded-lg  mt-3">
-                                        <button type="submit" onclick="sendEmail()"
-                                            class=" transition ease-in duration-200 font-semibold cursor-pointer border-color-910   hover:border-transparent px-6  py-2 rounded-lg border-[2px]  hover:text-white   "
-                                            value="Submit"></button>
+                                        <button class=" transition ease-in duration-200 font-semibold cursor-pointer border-color-910   hover:border-transparent px-6  py-2 rounded-lg border-[2px]  hover:text-white  " onclick="sendMail()">Submit</button>
                                     </div>
                                 </form>
                             </div>
