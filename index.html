@@ -16,211 +16,306 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-        <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-        </script>
-        <script type="text/javascript">
-        (function(){
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
             emailjs.init("3Q8hnPc21H8awbYML");
         })();
-        </script>
+    </script>
 </head>
 
 
 
-<body class="pt-24 px-40">
+<body class="pt-10 px-40 xl:px-16 lg:pt-0 lg:px-0 bg-light" id="page">
     <div class="container">
-        <header class="p-10 border-solid border-2 border-white">
+        <div class="infos alert">
+            <div class="content">
+                <div class="icon">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="25" fill="" />
+                        <path d="M27 22H23V40H27V22Z" fill="#e30041" />
+                        <path
+                            d="M25 18C24.2089 18 23.4355 17.7654 22.7777 17.3259C22.1199 16.8864 21.6072 16.2616 21.3045 15.5307C21.0017 14.7998 20.9225 13.9956 21.0769 13.2196C21.2312 12.4437 21.6122 11.731 22.1716 11.1716C22.731 10.6122 23.4437 10.2312 24.2196 10.0769C24.9956 9.92252 25.7998 10.0017 26.5307 10.3045C27.2616 10.6072 27.8864 11.1199 28.3259 11.7777C28.7654 12.4355 29 13.2089 29 14C29 15.0609 28.5786 16.0783 27.8284 16.8284C27.0783 17.5786 26.0609 18 25 18V18Z"
+                            fill="#e30041" />
+                    </svg>
+                </div>
+                <p class="text-white font-bold text-2xl text-center py-8">Welcome to my personal portfolio! <br> <span class="font-semibold text-base">I'm currently working on some small changes on contact form and dark mode.</span></p>
+            </div>
+            <button class="close w-full">
+                <svg height="18px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1"
+                    viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path fill="#b37986"
+                        d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z" />
+                </svg>
+            </button>
+        </div>
+        <header class="pb-10 lg:hidden">
             <div class="topHeader w-full grid gap-4 grid-cols-2 justify-between items-center">
                 <div class="logoWrapper w-full">
-                    <h1 class="logo font-marckscript text-5xl font-bold">Blerona</h1>
+                    <h1 class="logo font-marckscript text-5xl font-bold text-black" id="logo">Blerona</h1>
                 </div>
-                <div class="switchModeBtn w-full">
-                    <label class="switch">
-                        <input type="checkbox" onclick="myFunction()" />
-                        <span></span>
-                    </label>
+                <div class="mode-btn w-full flex justify-end lg:hidden">
+                    <div class="theme-container shadow-light">
+                        <img id="theme-icon"
+                            src="https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg"
+                            alt="ERR">
+                    </div>
                 </div>
             </div>
         </header>
+        <header class="hidden lg:block w-full">
+            <nav class="topnav grid grid-cols-1" id="topnav">
+                <div class="show-nav flex w-full justify-between">
+                    <a href="#" class="logo">
+                        <h1 class="logo font-marckscript text-5xl font-bold">Blerona</h1>
+                    </a>
+                    <button class="icon" onclick="toggle()"><i class="fa fa-bars"></i></button>
+                </div>
+                <ul class="clearfix ">
+                    <a class="activ w-full  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins   font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins   font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                        href="#one"><span class="iconLink"><i class="fa fa-user"></i></span>
+                        About Me</a>
+                    <a class="w-full  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins   font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins   font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                        href="#two"> <span class="iconLink"><i class="fa fa-file"></i></span>
+                        Resume</a>
+                    <a class="w-full  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins   font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins   font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                        href="#three"> <span class="iconLink"><i class="fa fa-tasks"></i></span>
+                        Projects</a>
+                    <a class="w-full  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins   font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins   font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                        href="#four"> <span class="iconLink"><i class="fa fa-address-book"></i></span>
+                        Contact</a>
+                </ul>
+            </nav>
+        </header>
 
 
-        <div class="aboutMe container grid grid-cols-12 gap-10 justify-between lg:mt-[220px]">
-            <div class="col-span-3 lg:col-span-4 top-44">
-                <div
-                    class="my-profile mb-6 lg:mb-0  mx-auto   relative bg-white text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0 ">
-                    <img src="./assets/images/ME.jpeg" alt=""
-                        class="me w-[197px] relative left-[28%] -top-[100px] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px]">
+
+        <div class="aboutMe container grid grid-cols-12 gap-10 justify-between sm:gap-0 ">
+            <div class="col-span-3 xl:col-span-5 lg:col-span-12 top-44  sm:w-auto">
+                <!-- My Profile -->
+                <div class="my-profile mb-6 lg:mb-0  mx-auto  flex flex-col relative bg-white text-center px-6 rounded-[20px] lg:rounded-[0px] mt-[180px] lg:mt-0 lg:px-0 lg:pr-2 sm:p-0"
+                    id="firstCard">
+                    <div
+                        class="myImage flex w-full justify-center lg:justify-between items-center sm:grid sm:grid-cols-1 sm:justify-items-center">
+                        <img src="./assets/images/ME.jpeg" alt=""
+                            class="me w-[197px] relative -top-[100px] transform  h-[240px] drop-shadow-xl mx-auto rounded-[20px] lg:top-[0px] lg:rounded-[0px] lg:mx-0">
+                        <div class="mycard hidden lg:block w-8/12">
+                            <h1 class="myName mb-6 text-3xl font-semibold">Blerona Maxhuni</h1>
+                            <h6 class="myOccupation mb-4 text-[#7B7B7B] inline-block  px-5 py-1.5 rounded-lg">Front End
+                                /
+                                Wordpress Developer</h6>
+                            <div class="mySocials flex justify-center space-x-3">
+                                <span class="socialbtn text-[#1773EA]"><a href="https://www.facebook.com/blerona.maxhuni.58"><i
+                                            class="fa-brands fa-facebook-f"></i></a></span>
+                                <span class="socialbtn text-[#1C9CEA]"><a href="https://www.linkedin.com/in/blerona-maxhuni-766b87243?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BheNyCVOxS%2BeVE55rr9iYZw%3D%3D"><i
+                                            class="fa-brands fa-linkedin"></i></a></span>
+                                <span class="socialbtn text-[#e14a84] "><a href="https://www.instagram.com/bleronamaxhunni"><i
+                                            class="fa-brands fa-instagram"></i></a></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="myCard pb-8">
-                        <h1 class="myName mb-6 text-4xl font-semibold">Blerona Maxhuni</h1>
-                        <h6 class="myOccupation mb-4 text-[#7B7B7B] inline-block  px-5 py-1.5 rounded-lg">Front End /
+                        <h1 class="myName mb-6 text-3xl font-semibold lg:hidden text-black" id="myName">Blerona Maxhuni
+                        </h1>
+                        <h6 class="myOccupation mb-4 text-[#7B7B7B] inline-block  px-5 py-1.5 rounded-lg lg:hidden text-black"
+                            id="myOccupation">
+                            Front End /
                             Wordpress Developer</h6>
-                        <div class="mySocials flex justify-center space-x-3">
-                            <span class="socialbtn text-[#1773EA]"><a href="https://www.facebook.com/"><i
-                                        class="fa-brands fa-facebook-f"></i></a></span>
-                            <span class="socialbtn text-[#1C9CEA]"><a href="https://www.linkedin.com/"><i
-                                        class="fa-brands fa-linkedin"></i></a></span>
-                            <span class="socialbtn text-[#e14a84] "><a href="https://www.instagram.com/"><i
-                                        class="fa-brands fa-instagram"></i></a></span>
+                        <div class="mySocials flex justify-center space-x-3 lg:hidden">
+                            <span class="socialbtn text-[#1773EA] bg-[#F3F6F6]" id="fb"><a
+                                    href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></span>
+                            <span class="socialbtn text-[#1C9CEA]  bg-[#F3F6F6]" id="link"><a
+                                    href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></span>
+                            <span class="socialbtn text-[#e14a84] bg-[#F3F6F6]" id="ig"><a
+                                    href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></span>
                         </div>
 
-                        <div class="myData p-7 rounded-2xl mt-7  bg-[#F3F6F6]">
+                        <div class="myData p-7 rounded-2xl mt-7  bg-[#F3F6F6] lg:grid lg:grid-cols-2 md:grid-cols-1"
+                            id="myData">
                             <div class="data flex border-b border-[#E3E3E3] pb-2.5 pt-3">
-                                <span class="flex-shrink-0 socialbtn bg-white dark:bg-black text-[#E93B81] shadow-md"><i
+                                <span class="flex-shrink-0 socialbtn bg-white text-[#E93B81] shadow-md"><i
                                         class="fa fa-phone"></i></span>
                                 <div class="text-left ml-2.5">
                                     <p class="text-xs text-[#44566C]">Phone</p>
-                                    <p class="break-all">+38349877385</p>
+                                    <p class="break-all text-black" id="phone">+38349877385</p>
                                 </div>
                             </div>
                             <div class="data flex border-b border-[#E3E3E3] pb-2.5 pt-3">
-                                <span class="flex-shrink-0 socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md"><i
+                                <span class="flex-shrink-0 socialbtn bg-white text-[#6AB5B9] shadow-md"><i
                                         class="fa fa-envelope"></i></span>
                                 <div class="text-left ml-2.5">
                                     <p class="text-xs text-[#44566C]">Email</p>
-                                    <p class="break-all">bleronamaxhunni@gmail.com</p>
+                                    <p class="break-all text-black" id="email">bleronamaxhunni@gmail.com</p>
                                 </div>
                             </div>
                             <div class="data flex border-b border-[#E3E3E3] pb-2.5 pt-3">
-                                <span class="flex-shrink-0 socialbtn bg-white dark:bg-black text-[#FD7590] shadow-md"><i
+                                <span class="flex-shrink-0 socialbtn bg-white text-[#FD7590] shadow-md"><i
                                         class="fa fa-map-marker"></i></span>
                                 <div class="text-left ml-2.5">
                                     <p class="text-xs text-[#44566C]">Location</p>
-                                    <p class="break-all">Vushtrri, Kosova</p>
+                                    <p class="break-all text-black" id="location">Vushtrri, Kosova</p>
                                 </div>
                             </div>
                             <div class="data flex border-b border-[#E3E3E3] pb-2.5 pt-3">
-                                <span class="flex-shrink-0 socialbtn bg-white dark:bg-black text-[#C17CEB] shadow-md"><i
+                                <span class="flex-shrink-0 socialbtn bg-white text-[#C17CEB] shadow-md"><i
                                         class="fa fa-calendar"></i></span>
                                 <div class="text-left ml-2.5">
                                     <p class="text-xs text-[#44566C]">Birthday</p>
-                                    <p class="break-all">May 13, 2002</p>
+                                    <p class="break-all text-black" id="birthday">May 13, 2002</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-span-9 lg:col-span-4 top-44">
-                <div class="navMenu w-[526px] h-[144px]  p-[30px] ml-auto mb-10  mt-[180px] rounded-[16px] bg-white">
+            <div class="col-span-9 xl:col-span-7 lg:col-span-12 top-44 lg:w-full">
+                <!-- MENU NAVBAR -->
+                <div class="navMenu lg:hidden w-[526px] xl:w-auto  h-[144px]  p-[30px] ml-auto mb-10  mt-[180px] rounded-[16px] bg-white"
+                    id="nav">
                     <nav class="block">
                         <ul class="clearfix flex">
-                            <a class="activ w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                            <a id="page1"
+                                class="links activ w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white bg-light-hover"
                                 href="#one"><span class="iconLink"><i class="fa fa-user"></i></span>
                                 About Me</a>
-                            <a class="w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                            <a id="page2"
+                                class="links w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white bg-light-hover"
                                 href="#two"> <span class="iconLink"><i class="fa fa-file"></i></span>
                                 Resume</a>
-                            <a class="w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                            <a id="page3"
+                                class="links w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white bg-light-hover"
                                 href="#three"> <span class="iconLink"><i class="fa fa-tasks"></i></span>
                                 Projects</a>
-                            <a class="w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
+                            <a id="page4"
+                                class="links w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out   w-full h-20 rounded-[10px]  cursor-pointer  transition-all duration-300 ease-in-out    font-poppins  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out hover:text-white bg-light-hover"
                                 href="#four"> <span class="iconLink"><i class="fa fa-address-book"></i></span>
                                 Contact</a>
                         </ul>
                     </nav>
                 </div>
-
-
-                <section class="bg-white w-11/12 h-auto flex flex-col ml-auto mb-20 rounded-[20px]  pt-8 pb-3 px-16">
+                <section
+                    class="bg-white w-11/12 xl:w-full h-auto flex flex-col ml-auto mb-20 rounded-[20px] sm:rounded-[0px]  pt-8 pb-3 px-16"
+                    id="secondCard">
+                    <!-- About Me -->
                     <div class="content activ" id="one">
                         <div class="w-full h-auto">
                             <div class="aboutMe mb-16">
-                                <h1 class="aboutTitle text-4xl flex items-center font-bold mb-7 gap-8">About Me
-                                    <hr class="sides border">
+                                <h1 class="aboutTitle text-4xl flex items-center font-bold mb-7 gap-8 text-black"
+                                    id="aboutMe">About Me
+                                    <hr class="sides border lightHr" id="darkHr">
                                     </h2>
-                                    <p class="aboutMeParagraph text-[#7B7B7B]">I am undergraduate student at the
-                                        University of Business and Technology (UBT), studying Computer Science and
-                                        Engineering (CSE). Knowledgeable in user interface, testing, and debugging
-                                        processes. Proficient in an assortment of technologies, including HTML , CSS
-                                        (Bootstrap ,SCSS and Tailwind), Javascript, PHP and Wordpress. Able to
-                                        effectively self-manage during independent projects, as
-                                        well as collaborate in a team setting. I have participated in an internship for
-                                        four months as Front End Developer. I've experience with
-                                        Adobe XD, Photoshop and Figma. I'm also familiar with Java, SQL and Algorithms &
-                                        Data Structure. Hardworking, dedicated and
-                                        enthusiastic person. I am confident in my knowledge, but I am still interested
-                                        in acquiring more knowledge and, of course, experience. Therefore, I am
-                                        interested in being a part of your company as Front End / Wordpress Developer.
+                                    <p class="aboutMeParagraph text-[#7B7B7B]" id="aboutMeParagraph">I am undergraduate student at the University of Business and Technology (UBT), studying Computer Science and Engineering (CSE). Knowledgeable in user interface, testing, and debugging processes. Proficient in an assortment of technologies, including HTML , CSS (Bootstrap and Tailwind), Javascript basics, Wordpress and PHP to be able to modify custom changes in custom themes. Able to
+                                        effectively self-manage during independent projects, as well as collaborate in a team setting. I have participated in two internships
+                                        ,one for four months as Front End Developer and another for three months as Wordpress Developer. I've experience with Adobe XD, Photoshop and Figma. I'm also familiar with SQL. Hardworking, dedicated and enthusiastic person. I am confident in my knowledge, but I am still interested in acquiring more knowledge and, of course, experience. Therefore, I am interested in being a part of your
+                                        company as Front End / Wordpress Developer Intern.                
+                                        <br><a class="font-bold" href="https://github.com/bleronamaxhuni">Blerona Maxhuni - Github Account</a>                        
                                     </p>
                             </div>
-                            <div class="WhatIDo mb-16">
-                                <h1 class="title text-3xl flex items-center font-semibold mb-7">What I Do!</h2>
-                                    <div class="grid gap-8 gap-x-28 grid-cols-2 md:grid-cols-1 xl:grid-cols-2">
-
-                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
-                                            style="background: rgb(252, 244, 255);">
+                            <div class="WhatIDo mb-16 w-full ">
+                                <h1 class="title text-3xl flex items-center font-semibold mb-7 text-black" id="whatIDo">
+                                    What I Do!</h2>
+                                    <div class="grid gap-8  grid-cols-2 xl:grid-cols-2 md:grid-cols-1">
+                                        <div class="about-box w-auto gap-8 col-span-1 p-12 px-10 xl:p-6 xl:px-6 xl:gap-2 flex justify-between bg-[#fcf4ff]"
+                                            id="design">
                                             <i
-                                                class="fa-solid fa-swatchbook text-3xl w-10 h-10 object-contain text-[#d870ff]"></i>
-                                            <div class="space-y-2 break-all">
-                                                <h3 class="text-xl font-semibold">Design Ideas</h3>
+                                                class="fa-solid fa-swatchbook text-3xl md:text-2xl w-10 xl:text-xl  h-10 object-contain text-[#d870ff]"></i>
+                                            <div class="space-y-2 break-all flex w-full justify-center">
+                                                <h3
+                                                    class="titles text-black text-xl xl:text-base md:text-xl  font-semibold">
+                                                    Design Ideas
+                                                </h3>
                                             </div>
                                         </div>
-                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
-                                            style="background: rgb(254, 250, 240);">
+                                        <div class="about-box w-auto gap-8 col-span-1 p-12 px-10 xl:p-6 xl:px-6 xl:gap-2 flex justify-between bg-[#fefaf0]"
+                                            id="client-side">
                                             <i
-                                                class="fa-solid fa-object-ungroup  text-3xl w-10 h-10 object-contain text-[#fbc336]"></i>
-                                            <div class="space-y-2 break-all">
-                                                <h3 class="text-xl font-semibold">Client-side</h3>
+                                                class="fa-solid fa-object-ungroup  text-3xl md:text-2xl xl:text-xl  w-10 h-10 object-contain text-[#fbc336]"></i>
+                                            <div class="space-y-2 break-all  flex w-full justify-center">
+                                                <h3
+                                                    class="titles text-black text-xl xl:text-base md:text-xl font-semibold">
+                                                    Client-side
+                                                </h3>
                                             </div>
                                         </div>
-                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
-                                            style="background: rgb(255, 244, 244);">
+                                        <div class="about-box w-auto gap-8 col-span-1 p-12 px-10 xl:p-6 xl:px-6 xl:gap-2 flex justify-between bg-[#fff4f4]"
+                                            id="responsivity">
                                             <i
-                                                class="fa-solid fa-mobile-button  text-3xl w-10 h-10 object-contain text-[#e75f5f]"></i>
-                                            <div class="space-y-2 break-all">
-                                                <h3 class="text-xl font-semibold">Responsivity</h3>
+                                                class="fa-solid fa-mobile-button  text-3xl md:text-2xl  xl:text-xl w-10 h-10 object-contain text-[#e75f5f]"></i>
+                                            <div class="space-y-2 break-all  flex w-full justify-center">
+                                                <h3
+                                                    class="titles text-black text-xl xl:text-base md:text-xl font-semibold">
+                                                    Responsivity
+                                                </h3>
                                             </div>
                                         </div>
-                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
-                                            style="background: rgb(255, 240, 248);">
+                                        <div class="about-box w-auto gap-8 col-span-1 p-12 px-10 xl:p-6 xl:px-6 xl:gap-2 flex justify-between bg-[#fff0f8]"
+                                            id="management">
                                             <i
-                                                class="fa-solid fa-list-check text-3xl w-10 h-10 object-contain text-[#e557a2]"></i>
-                                            <div class="space-y-2 break-all">
-                                                <h3 class="text-xl font-semibold">Management</h3>
+                                                class="fa-solid fa-list-check text-3xl md:text-2xl w-10 xl:text-xl  h-10 object-contain text-[#e557a2]"></i>
+                                            <div class="space-y-2 break-all  flex w-full justify-center">
+                                                <h3
+                                                    class="titles text-black text-xl xl:text-base md:text-xl font-semibold">
+                                                    Management
+                                                </h3>
                                             </div>
                                         </div>
-                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
-                                            style="background: rgb(243, 250, 255);">
+                                        <div class="about-box w-auto gap-8 col-span-1 p-12 px-10 xl:p-6 xl:px-6 xl:gap-2 flex justify-between bg-[#f3faff]"
+                                            id="web">
                                             <i
-                                                class="fa-solid fa-code text-3xl w-10 h-10 object-contain text-[#419ee1]"></i>
-                                            <div class="space-y-2 break-all">
-                                                <h3 class="text-xl font-semibold">Web Development</h3>
+                                                class="fa-solid fa-code text-3xl md:text-2xl w-10 h-10  xl:text-xl object-contain text-[#419ee1]"></i>
+                                            <div class="space-y-2 break-all  flex w-full justify-center">
+                                                <h3
+                                                    class="titles text-black text-xl xl:text-base md:text-xl font-semibold">
+                                                    Web
+                                                    Development</h3>
                                             </div>
                                         </div>
-                                        <div class="about-box w-[400px] col-span-1 p-12 px-20 flex justify-between"
-                                            style="background: rgb(252, 244, 255);">
+                                        <div class="about-box w-auto gap-8 col-span-1 p-12 px-10 xl:p-6 xl:px-6 xl:gap-2 flex justify-between bg-[#fcf4ff]"
+                                            id="testing">
                                             <i
-                                                class="fa-solid fa-laptop  text-3xl w-10 h-10 object-contain text-[#d870ff]"></i>
-                                            <div class="space-y-2 break-all">
-                                                <h3 class="text-xl font-semibold">Testing</h3>
+                                                class="fa-solid fa-laptop  text-3xl md:text-2xl w-10 h- xl:text-xl 10 object-contain text-[#d870ff]"></i>
+                                            <div class="space-y-2 break-all  flex w-full justify-center">
+                                                <h3
+                                                    class="titles text-black text-xl xl:text-base md:text-xl font-semibold">
+                                                    Testing</h3>
                                             </div>
                                         </div>
                                     </div>
                             </div>
                         </div>
-                        <div class="mySkills w-full flex flex-col bg-[#F8FBFB] py-10 rounded-xl mb-20">
-                            <h1 class="title text-3xl text-center font-semibold mb-7">Skills</h2>
+                        <div class="mySkills w-full flex flex-col bg-[#F8FBFB] py-10 rounded-xl mb-20" id="skills">
+                            <h1 class="title text-3xl text-center font-semibold mb-7 text-black" id="skillTitle">Skills
+                                </h2>
                                 <div class="myskillslider w-full flex justify-center">
                                     <ul id="c" class="skillList w-10/12 flex justify-center">
-                                        <li class="imageList"><img class="object-scale-down w-[70px] h-full"
+                                        <li class="imageList"><img
+                                                class="object-scale-down w-[70px] sm:w-[100px] h-full"
                                                 src="./assets/images/html.png"></li>
-                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                        <li class="image-list"><img
+                                                class="object-scale-down w-[70px] sm:w-[100px] h-full"
                                                 src="./assets/images/css-3.png"></li>
-                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                        <li class="image-list"><img
+                                                class="object-scale-down w-[70px] sm:w-[100px] h-full"
                                                 src="./assets/images/bootstrap.png"></li>
-                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                        <li class="image-list"><img
+                                                class="object-scale-down w-[70px] sm:w-[100px] h-full"
                                                 src="./assets/images/js-file.png"></li>
-                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                        <li class="image-list"><img
+                                                class="object-scale-down w-[70px] sm:w-[100px] h-full"
                                                 src="./assets/images/wordpress.png"></li>
-                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                        <li class="image-list"><img
+                                                class="object-scale-down w-[70px] sm:w-[100px] h-full"
                                                 src="./assets/images/php.png"></li>
-                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                        <li class="image-list"><img
+                                                class="object-scale-down w-[70px] sm:w-[100px] h-full"
                                                 src="./assets/images/sql-server.png"></li>
-                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                        <li class="image-list"><img
+                                                class="object-scale-down w-[70px] sm:w-[100px] h-full"
                                                 src="./assets/images/xd.png"></li>
-                                        <li class="image-list"><img class="object-scale-down w-[70px] h-full"
+                                        <li class="image-list"><img
+                                                class="object-scale-down w-[70px] sm:w-[100px] h-full"
                                                 src="./assets/images/photoshop.png"></li>
                                     </ul>
                                 </div>
@@ -230,11 +325,13 @@
                             <p class="text-center text-slate-500">&copy;2022 Blerona Maxhuni</p>
                         </div>
                     </div>
+                    <!-- Resume -->
                     <div class="content" id="two">
                         <div class="w-full h-auto">
                             <div class="myResume mb-16">
-                                <h1 class="resumeTitle text-4xl flex items-center font-bold mb-7 gap-8">Resume
-                                    <hr class="sides border">
+                                <h1 class="resumeTitle text-4xl flex items-center font-bold mb-7 gap-8 text-black"
+                                    id="resumeTitle">Resume
+                                    <hr class="sides border lightHr" id="darkHr1">
                                 </h1>
                             </div>
                             <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6 mt-[30px] mb-16">
@@ -301,83 +398,83 @@
                                     </div>
                                     <div class="py-4 pl-5 pr-3 space-y-2  mb-6 rounded-lg  "
                                         style="background: rgb(238, 245, 250);"><span
-                                            class="text-tiny text-gray-lite ">Upwork Freelancer</span>
+                                            class="text-tiny text-gray-lite ">Freelancer</span>
                                         <h3 class="text-xl ">Front End / Wordpress Developer</h3>
-                                        <p class="">Upwork</p>
+                                        <p class=""></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="my-skills grid grid-cols-2  md:grid-cols-1 gap-28 w-full flex bg-[#F8FBFB] p-10 rounded-xl mb-16">
-                            <div class="skills col-span-1">
-                                <h1 class="text-2xl font-medium mb-6 text-center">Working Skills</h1>
-                                <div class="skills-bar">
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>HTML</span>
+                        <div class="my-skills w-full mb-20  bg-[#F8FBFB] rounded-xl" id="workingSkills">
+                            <div class="skills  flex xl:flex-col xl:justify-center gap-8  p-10 lg:flex-row md:flex-col">
+                                <div class="col-span-1">
+                                    <h1 class="text-2xl font-medium mb-6 text-center">Working Skills</h1>
+                                    <div class="skills-bar">
+                                        <div class="bar">
+                                            <div class="info">
+                                                <span>HTML</span>
+                                            </div>
+                                            <div class="progress-line"><span class="html"></span></div>
                                         </div>
-                                        <div class="progress-line"><span class="html"></span></div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>CSS</span>
+                                        <div class="bar">
+                                            <div class="info">
+                                                <span>CSS</span>
+                                            </div>
+                                            <div class="progress-line"><span class="css"></span></div>
                                         </div>
-                                        <div class="progress-line"><span class="css"></span></div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>BOOTSTRAP</span>
+                                        <div class="bar">
+                                            <div class="info">
+                                                <span>BOOTSTRAP</span>
+                                            </div>
+                                            <div class="progress-line"><span class="bootstrap"></span></div>
                                         </div>
-                                        <div class="progress-line"><span class="bootstrap"></span></div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>Tailwind</span>
+                                        <div class="bar">
+                                            <div class="info">
+                                                <span>Tailwind</span>
+                                            </div>
+                                            <div class="progress-line">
+                                                <span class="tailwind"></span>
+                                            </div>
                                         </div>
-                                        <div class="progress-line">
-                                            <span class="tailwind"></span>
+                                        <div class="bar">
+                                            <div class="info">
+                                                <span>JAVASCRIPT</span>
+                                            </div>
+                                            <div class="progress-line">
+                                                <span class="javascript"></span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>JAVASCRIPT</span>
+                                        <div class="bar">
+                                            <div class="info">
+                                                <span>Wordpress</span>
+                                            </div>
+                                            <div class="progress-line"><span class="wordpress"></span></div>
                                         </div>
-                                        <div class="progress-line">
-                                            <span class="javascript"></span>
+                                        <div class="bar">
+                                            <div class="info">
+                                                <span>PHP</span>
+                                            </div>
+                                            <div class="progress-line"><span class="php"></span></div>
                                         </div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>Wordpress</span>
+                                        <div class="bar">
+                                            <div class="info">
+                                                <span>SQL</span>
+                                            </div>
+                                            <div class="progress-line"><span class="sql"></span></div>
                                         </div>
-                                        <div class="progress-line"><span class="wordpress"></span></div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>PHP</span>
-                                        </div>
-                                        <div class="progress-line"><span class="php"></span></div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>SQL</span>
-                                        </div>
-                                        <div class="progress-line"><span class="sql"></span></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-span-1">
-                                <h4 class="text-2xl font-medium mb-6 text-center">Knowledges</h4>
-                                <div class="flex gap-y-5 gap-x-5 flex-wrap">
-                                    <button class="resume-btn">Web Design</button>
-                                    <button class="resume-btn">Marketing</button>
-                                    <button class="resume-btn">Client Side Development</button>
-                                    <button class="resume-btn">Responsivity</button>
-                                    <button class="resume-btn">Testing & debugging</button>
-                                    <button class="resume-btn">Flexibility</button>
-                                    <button class="resume-btn">Project Ideas</button>
-                                    <button class="resume-btn">Project Menagement</button>
+                                <div class="col-span-1">
+                                    <h4 class="text-2xl font-medium mb-6 text-center">Knowledges</h4>
+                                    <div class="flex gap-y-5 gap-x-5 flex-wrap justify-center pt-8">
+                                        <button class="resume-btn">Web Design</button>
+                                        <button class="resume-btn">Client Side Development</button>
+                                        <button class="resume-btn">Responsivity</button>
+                                        <button class="resume-btn">Testing & debugging</button>
+                                        <button class="resume-btn">Flexibility</button>
+                                        <button class="resume-btn">Project Ideas</button>
+                                        <button class="resume-btn">Project Menagement</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -385,11 +482,13 @@
                             <p class="text-center text-slate-500">&copy;2022 Blerona Maxhuni</p>
                         </div>
                     </div>
+                    <!-- Projects -->
                     <div class="content" id="three">
                         <div class="w-full h-auto">
                             <div class="myWork mb-16">
-                                <h1 class="WorkTitle text-4xl flex items-center font-bold mb-7 gap-8">Projects
-                                    <hr class="sides border">
+                                <h1 class="WorkTitle text-4xl flex items-center font-bold mb-7 gap-8 text-black"
+                                    id="projectTitle">Projects
+                                    <hr class="sides border lightHr" id="darkHr2">
                                 </h1>
                             </div>
                             <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6 mt-[30px] mb-16">
@@ -411,7 +510,8 @@
                                     <a href="https://errorsoftware.netlify.app/">
                                         <div class="overflow-hidden rounded-lg">
                                             <img class="w-full    cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto "
-                                                src="./assets/images/Screenshot (152).png" alt=""></div>
+                                                src="./assets/images/Screenshot (152).png" alt="">
+                                        </div>
                                     </a>
                                 </div>
                                 <div class="rounded-lg p-6 border-[#212425]" style="background: #000000;">
@@ -422,40 +522,55 @@
                                     </a>
                                 </div>
                             </div>
-                        <div class="copyright">
-                            <p class="text-center text-slate-500">&copy;2022 Blerona Maxhuni</p>
+                            <div class="copyright">
+                                <p class="text-center text-slate-500">&copy;2022 Blerona Maxhuni</p>
+                            </div>
                         </div>
                     </div>
-                    </div>
+                    <!-- Contact -->
                     <div class="content" id="four">
                         <div class="w-full h-auto">
                             <div class="contact mb-16">
-                                <h1 class="contactTitle text-4xl flex items-center font-bold mb-7 gap-8">Contact Me
-                                    <hr class="sides border">
+                                <h1 class="contactTitle text-4xl flex items-center font-bold mb-7 gap-8 text-black"
+                                    id="contactTitle">Contact Me
+                                    <hr class="sides border lightHr" id="darkHr3">
                                 </h1>
                             </div>
-                            <div class="mx-4 md:mx-[60px] p-4 md:p-16  bg-color-810 rounded-xl  mb-[30px] md:mb-[60px]">
-                                <h3 class="text-4xl  "><span class="text-gray-lite ">Get in touch with </span><span
-                                        class="font-bold"> Me</span></h3>
-                                <form id="myForm">
+                            <div class="mx-4 p-4 lg:p-0 bg-color-810 rounded-xl  mb-[30px] md:mb-[60px]">
+                                <h3 class="text-4xl w-full"><span class="text-gray-lite text-black" id="contact1">Get in
+                                        touch with
+                                    </span><span class="font-bold text-black" id="contact2"> Me</span></h3>
+                                <form id="myForm" class="w-full">
                                     <div class="relative  z-0 w-full mt-[40px] mb-8 group">
-                                        <input type="text" id="name" name="name" class="block autofill:bg-transparent py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none  focus:outline-none focus:ring-0 focus:border-[#FF6464] peer"
-                                        placeholder=" " required="">
-                                        <label for="name"class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FF6464] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Name
-                                        *</label></div>
-                                    <div class="relative z-0 w-full mb-8 group">
-                                        <input type="email"  id="email" name="user_email" class="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none  focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"
+                                        <input type="text" id="name" name="name"
+                                            class="block autofill:bg-transparent py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none  focus:outline-none focus:ring-0 focus:border-[#FF6464] peer"
                                             placeholder=" " required="">
-                                            <label for="user_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Email
-                                            *</label></div>
+                                        <label for="name"
+                                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FF6464] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Name
+                                            *</label>
+                                    </div>
                                     <div class="relative z-0 w-full mb-8 group">
-                                        <input type="text" name="message" class="block autofill:bg-yellow-200 py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none  focus:outline-none focus:ring-0 focus:border-[#CA56F2] peer"
+                                        <input type="email" id="email" name="user_email"
+                                            class="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none  focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"
+                                            placeholder=" " required="">
+                                        <label for="user_email"
+                                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Email
+                                            *</label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-8 group">
+                                        <input type="text" name="message"
+                                            class="block autofill:bg-yellow-200 py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none  focus:outline-none focus:ring-0 focus:border-[#CA56F2] peer"
                                             placeholder=" " id="message" required="">
-                                        <label for="message" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#CA56F2] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Message
-                                            *</label></div>
+                                        <label for="message"
+                                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#CA56F2] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Message
+                                            *</label>
+                                    </div>
 
-                                    <div class="transition-all duration-300  ease-in-out inline-block hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] rounded-lg  mt-3">
-                                        <button class=" transition ease-in duration-200 font-semibold cursor-pointer border-color-910   hover:border-transparent px-6  py-2 rounded-lg border-[2px]  hover:text-white  " onclick="sendMail()">Submit</button>
+                                    <div
+                                        class="transition-all duration-300  ease-in-out inline-block hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] rounded-lg  mt-3">
+                                        <button
+                                            class="bg-gray-200 hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] transition ease-in duration-200 font-semibold cursor-pointer border-color-910   hover:border-transparent px-6  py-2 rounded-lg border-[2px]  hover:text-white  "
+                                            onclick="sendMail()">Submit</button>
                                     </div>
                                 </form>
                             </div>
@@ -466,9 +581,10 @@
                     </div>
                 </section>
             </div>
+        </div>
 
-            <script src="assets/js/customscript.js"></script>
-            <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="assets/js/customscript.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
