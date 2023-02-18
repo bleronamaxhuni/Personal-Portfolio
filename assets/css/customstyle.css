@@ -182,16 +182,19 @@ div.content p{
     width: 50%;
 }
 .progress-line .php {
-    width: 15%;
+    width: 70%;
+}
+.progress-line .laravel {
+    width: 90%;
 }
 .progress-line .wordpress {
     width: 80%;
 }
 .progress-line .sql {
-    width: 10%;
+    width: 50%;
 }
 .progress-line .tailwind {
-    width: 80%;
+    width: 90%;
 }
 
 .bar .progress-line span::before {
@@ -430,4 +433,7 @@ div.content p{
 }
 .infos .icon{
     background-color: #680c23;
+}
+.disclaimer{
+    background-color: rgba(248, 113, 113, 0.459);
 }
